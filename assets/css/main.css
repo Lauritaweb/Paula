@@ -1,17 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+* {
+  font-family: "PT Sans", sans-serif;
+  box-sizing: border-box;
+  color: #3E3C3C;
+}
+
+.text-main {
+  color: #653E6F;
+}
+
+.bg-main,
+.btn-main {
+  background-color: #653E6F;
+}
+
+.btn-main {
+  color: #FFFCD1;
+}
+.btn-main:hover {
+  background-color: #FFFCD1;
+  border-color: #653E6F;
+  transition: all 0.2s ease;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.menu img {
+  width: 120px;
+}
+.menu ul li a {
+  color: #653E6F;
+  text-decoration: none;
+}
+.menu ul li a.active {
+  font-weight: 600;
+  color: #653E6F !important;
+}
+.menu ul li svg {
+  width: 25px;
+  margin-top: 8px;
+}
+
 .header-home {
   position: relative;
+  height: 80vh;
+  overflow: hidden;
 }
 .header-home video {
   position: absolute;
   left: 0;
   top: 0;
   z-index: 1;
+  min-width: 100%;
+  min-height: 100vh;
+  max-width: 100%;
+  max-height: 100vh;
+  object-fit: cover;
 }
-.header-home h1 {
+.header-home .box {
   position: absolute;
   left: 50%;
   top: 50%;
   z-index: 3;
+  transform: translate(-50%, -50%);
+}
+.header-home .box h1 {
+  color: #FFFCD1;
+  font-weight: 400;
+  text-align: center;
+  font-size: 6vw;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+}
+.header-home .box p {
+  text-align: center;
+  font-size: 4vw;
+  color: White;
+  margin-top: -20px;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+}
+
+.about-me .me {
+  padding-left: 10vw;
+}
+
+.therapy h3 {
+  font-weight: 600;
+}
+
+.workshops h3 {
+  font-weight: 600;
+}
+.workshops h4 {
+  color: #653E6F;
+}
+.workshops a {
+  text-decoration: none;
+}
+
+.banner-hero {
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url(../img/banner-corporate.jpg) top left no-repeat;
+  background-size: cover;
+}
+.banner-hero h3 {
+  font-weight: 600;
+  color: #FFFCD1;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+}
+
+@media (width < 768px) {
+  .menu img {
+    width: 100px;
+  }
+  .header-home .box h1 {
+    font-size: 9vw;
+  }
+  .header-home .box p {
+    margin-top: -5px;
+    font-size: 5vw;
+  }
+  .therapy .card img.img-fluid.rounded-start {
+    width: 100%;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

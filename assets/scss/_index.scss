@@ -1,16 +1,134 @@
 // index
+body{
+    overflow-x: hidden;
+}
+.menu{
+    img{
+        width: 120px;
+    }
+    ul{
+        li{
+            a{
+                color: $mainColor;
+                text-decoration: none;
+                &.active{
+                    font-weight: $bold;
+                    color: $mainColor!important;
+                }
+            }
+            svg{
+                width: 25px;
+                margin-top: 8px;
+            }
+        }
+    }
+}
 .header-home{
     position: relative;
+    height: 80vh;
+    overflow: hidden;
     video{
         position: absolute;
         left: 0;
         top: 0;
         z-index: 1;
+        min-width: 100%;
+        min-height: 100vh;
+        max-width: 100%;
+        max-height: 100vh;
+        object-fit: cover;
     }
-    h1{
+    .box{
         position: absolute;
         left: 50%;
         top: 50%;
         z-index: 3;
+        transform: translate(-50%, -50%);
+        h1{
+            color: $white;
+            font-weight:$regular;
+            text-align: center;
+            font-size: 6vw;
+            text-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+        }
+        p{
+            text-align: center;
+            font-size: 4vw;
+            color: White;
+            margin-top: -20px;
+            text-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+        }
+    }
+}
+// about me
+.about-me{
+    .me{
+        padding-left: 10vw;
+    }
+}
+// therapy
+.therapy{
+    h3{
+        font-weight: $bold;
+    }
+    
+}
+// workshops
+.workshops{
+    h3{
+        font-weight: $bold;
+    }
+    h4{
+        color: $mainColor;
+    }
+    a{
+        text-decoration: none;
+    }
+}
+// banner corporate
+.banner-hero{
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(../img/banner-corporate.jpg) top left no-repeat;
+    background-size: cover;
+    h3{
+        font-weight: $bold;
+        color: $white;
+        text-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+    }
+}
+
+
+// responsive
+@media (width<768px){
+    .menu{
+        img{
+            width: 100px;
+        }
+    }
+    .header-home{
+        .box{
+            h1{
+                font-size: 9vw;
+            }
+            p{
+                margin-top: -5px;
+                font-size: 5vw;
+            }
+        }
+    }
+    .therapy{
+        .card{
+            img.img-fluid.rounded-start{
+                width: 100%;
+                border-top-right-radius: 3px;
+                border-top-left-radius: 3px;
+                border-bottom-left-radius: 0!important;
+                border-bottom-right-radius: 0!important;
+            }
+        }
     }
 }

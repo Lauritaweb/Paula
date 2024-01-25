@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+// vars
+$mainColor:#653E6F;
+$secondaryColor:#A16575;
+$white:#FFFCD1;
+$black:#1E1E1E;
+$gray:#3E3C3C;
+
+// weight
+$bold:600;
+$medium:500;
+$regular:400;
+$light:300;
+
+// fonts
+$mainFont:'PT Sans', sans-serif;
+
+*{
+    font-family: $mainFont;
+    box-sizing: border-box;
+    color: $gray;
+}
+
+// utilities
+.text-main{
+    color: $mainColor;
+}
+.bg-main,
+.btn-main{
+    background-color: $mainColor;
+}
+.btn-main{
+    color: $white;
+    &:hover{
+        background-color: $white;
+        border-color: $mainColor;
+        transition: all .2s ease;
+    }
+}
