@@ -38,3 +38,13 @@ $mainFont:'PT Sans', sans-serif;
         transition: all .2s ease;
     }
 }
+.btn-main-outline{
+    background-color: $white;
+    color: $mainColor;
+    &:hover{
+        background-color: $secondaryColor;
+        transition: all .2s ease;
+        border: $white solid 1px;
+        color: $white;
+    }
+}
